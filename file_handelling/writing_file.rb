@@ -35,14 +35,14 @@ Mode |  Meaning
 
 =end
 
-# File.open("outfile.txt","w+") do |file|
-#     file.write("Mahima, Ward Inspector")
-# end
+File.open("outfile.txt","w+") do |file|
+    file.write("Mahima, Ward Inspector")
+end
 
 # Append mode, appends the content at the end of the file
 File.open("outfile.txt","a") do |file|
-    # file.write("Surya, Dev") # <- this wont show up in a new line, missing \n line escape
-    # file.write("\nSurya, Dev")
+    file.write("Surya, Dev") # <- this wont show up in a new line, missing \n line escape
+    file.write("\nSurya, Dev")
 end
 
 # replacing the content of the line
@@ -50,3 +50,10 @@ File.open("outfile.txt","r+") do |file|
     puts file.readline()
     file.write("Overriden") # 
 end
+
+=begin
+File content at last
+
+Mahima, Ward InspectorSurya, Dev
+Overridenv
+=end
