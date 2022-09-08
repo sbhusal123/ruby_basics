@@ -27,7 +27,6 @@ else
 end
 
 
-# TODO
 def max(num1, num2, num3)
     if num1 > num2 and num1 > num3
         return num1
@@ -36,5 +35,6 @@ def max(num1, num2, num3)
     else
         return num3
     end
+end
 
 puts max(5, 26, 10)
